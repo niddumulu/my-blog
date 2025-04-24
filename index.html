@@ -4,31 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog Saya</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <h1>Blog Saya</h1>
-    <p>Selamat datang di blog pribadi saya!</p>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-6 shadow-md">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-3xl font-bold">Blog Saya</h1>
+      <p class="text-lg mt-1">Selamat datang di blog pribadi saya!</p>
+    </div>
   </header>
-  <main>
-    <section class="post-list">
-      <article>
-        <h2><a href="posts/Manfaat-Belajar-Koding-Sejak-Dini.html">Manfaat Belajar Koding Sejak Dini</a></h2>
-        <p>Belajar koding sejak dini latih logika, kreativitas, dan ketekunan. Mulai dari yang seru seperti Scratch, jadi bekal hebat untuk masa depan!</p>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 py-10">
+    <section class="space-y-6">
+      
+      <!-- Artikel 1 -->
+      <article class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h2 class="text-2xl font-semibold text-blue-600">
+          <a href="posts/Manfaat-Belajar-Koding-Sejak-Dini.html" class="hover:underline">
+            Manfaat Belajar Koding Sejak Dini
+          </a>
+        </h2>
+        <p class="mt-2 text-gray-700">
+          Belajar koding sejak dini latih logika, kreativitas, dan ketekunan. Mulai dari yang seru seperti Scratch, jadi bekal hebat untuk masa depan!
+        </p>
       </article>
-      <article>
-        <h2><a href="posts/artikel-2.html">Judul Artikel 2</a></h2>
-        <p>Cuplikan isi artikel 2...</p>
+
+      <!-- Artikel 2 -->
+      <article class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h2 class="text-2xl font-semibold text-blue-600">
+          <a href="posts/artikel-2.html" class="hover:underline">
+            Judul Artikel 2
+          </a>
+        </h2>
+        <p class="mt-2 text-gray-700">Cuplikan isi artikel 2...</p>
       </article>
-      <article>
-        <h2><a href="posts/artikel-3.html">Judul Artikel 3</a></h2>
-        <p>Cuplikan isi artikel 3...</p>
+
+      <!-- Artikel 3 -->
+      <article class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+        <h2 class="text-2xl font-semibold text-blue-600">
+          <a href="posts/artikel-3.html" class="hover:underline">
+            Judul Artikel 3
+          </a>
+        </h2>
+        <p class="mt-2 text-gray-700">Cuplikan isi artikel 3...</p>
       </article>
+
     </section>
   </main>
-  <footer>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-4 mt-10">
     <p>&copy; 2025 Blog Saya</p>
   </footer>
+
 </body>
 </html>
