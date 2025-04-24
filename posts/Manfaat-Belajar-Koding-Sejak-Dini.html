@@ -67,6 +67,19 @@
         <a href="#" class="text-blue-600 hover:underline">Facebook</a>
         <a href="#" class="text-blue-600 hover:underline">Twitter</a>
       </div>
+      <!-- Rating Section -->
+<section class="bg-white p-6 rounded-xl shadow mt-6 space-y-4">
+  <h3 class="text-lg font-semibold text-gray-700">Beri rating artikel ini:</h3>
+  <div id="starRating" class="flex space-x-1 text-yellow-400 text-2xl cursor-pointer">
+    <span data-value="1">&#9733;</span>
+    <span data-value="2">&#9733;</span>
+    <span data-value="3">&#9733;</span>
+    <span data-value="4">&#9733;</span>
+    <span data-value="5">&#9733;</span>
+  </div>
+  <p id="ratingMessage" class="text-sm text-gray-600 mt-2 hidden">Terima kasih atas rating Anda!</p>
+</section>
+
     </article>
 
   </main>
@@ -75,6 +88,35 @@
   <footer class="bg-blue-600 text-white text-center py-4 mt-10">
     <p>&copy; 2025 Blog Saya</p>
   </footer>
+<script>
+  const stars = document.querySelectorAll("#starRating span");
+  const message = document.getElementById("ratingMessage");
+
+  // Load rating dari localStorage
+  const savedRating = localStorage.getItem("articleRating");
+  if (savedRating) highlightStars(savedRating);
+
+  stars.forEach(star => {
+    star.addEventListener("click", () => {
+      const rating = star.getAttribute("data-value");
+      localStorage.setItem("articleRating", rating);
+      highlightStars(rating);
+      message.classList.remove("hidden");
+    });
+  });
+
+  function highlightStars(rating) {
+    stars.forEach(star => {
+      if (star.getAttribute("data-value") <= rating) {
+        star.classList.add("text-yellow-400");
+        star.classList.remove("text-gray-300");
+      } else {
+        star.classList.remove("text-yellow-400");
+        star.classList.add("text-gray-300");
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
