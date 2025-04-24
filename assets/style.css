@@ -22,3 +22,18 @@ article {
   padding-bottom: 1em;
   margin-bottom: 1em;
 }
+.pagination {
+  text-align: center;
+  margin-top: 30px;
+}
+.pagination a {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0 5px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.pagination a:hover {
+  background-color: #ddd;
+}
+
